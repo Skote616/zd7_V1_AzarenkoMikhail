@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Список тортов" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.CakeListPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="styles.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Онлайн-кулинария (заказ и покупка тортов)"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="Center"
+                   ClassId="header"/>
+            <ListView x:Name="CakeListView"
+                  ItemSelected="OnCakeSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Image}" WidthRequest="50" HeightRequest="50" />
+                                <Label Text="{Binding Name}" VerticalOptions="Center" />
+                                <Label Text="{Binding Price}" VerticalOptions="Center" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Данные по наличию тортов на" 
+            
+            TextColor="Red"
+               HorizontalOptions="Center" />
+            <Button Text="Просмотр информации по торту"
+                Clicked="OnViewCakeInfoClicked" />
+            <Button Text="Расчет стоимости торта"
+                Clicked="OnCalculateCostClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

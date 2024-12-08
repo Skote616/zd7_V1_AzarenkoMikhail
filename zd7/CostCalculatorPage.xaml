@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Калькулятор стоимости" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.CostCalculatorPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="styles.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Калькулятор стоимости торта"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" 
+                   ClassId="header"/>
+            <Label Text="Выберите сложность работы:" />
+            <Label Text="Цена за кг" x:Name="PriceEntry" />
+            <Label Text="Количество кг" x:Name="QuantityCalEntry" />
+            <Picker Title="Сложность работы" x:Name="ComplexityPicker">
+                <Picker.Items>
+                    <x:String>40% - сложная мастика с фигурами людей</x:String>
+                    <x:String>20% - дополнительное украшение с помощью крема</x:String>
+                    <x:String>10% - наличие надписи</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Рассчитать стоимость"
+                Clicked="OnCalculateClicked" ClassId="button"/>
+            <Label Text="Рассчитанная стоимость:"
+               x:Name="ResultLabel" />
+            <Button Text="На главную страницу"
+                Clicked="OnReturnToMainPageClicked" ClassId="button"/>
+            <Button Text="На корневую страницу"
+                Clicked="OnReturnToRootPageClicked" ClassId="button"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.LoginPage"
+             Title="Вход">
+    <ContentPage.Resources>
+        <StyleSheet Source="styles.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+            <Label Text="Вход в систему" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="DeepSkyBlue"
+                   ClassId="header" />
+            <Entry Placeholder="Логин" 
+                   x:Name="LoginEntry" 
+                   Keyboard="Text" 
+                   ClassId="entry" />
+            <Entry Placeholder="Пароль" 
+                   x:Name="PasswordEntry" 
+                   IsPassword="True" 
+                   ClassId="entry" />
+            <Button Text="Войти" 
+                    Clicked="OnLoginButtonClicked" 
+                    ClassId="button" />
+            <Label x:Name="ErrorLabel" 
+                   TextColor="Red" 
+                   IsVisible="False" 
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

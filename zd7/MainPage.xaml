@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Информация о торте" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd7.MainPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="styles.css" />
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10">
+        <Label Text="Информация по тортам - кулинария (заказ и покупка тортов)"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="Red"
+               HorizontalOptions="Center"
+               ClassId="header"/>
+        <Image x:Name="image"  Source="poleno.jpeg"/>
+        <Label x:Name="name" Text="Название торта: [Название]" />
+        <Label x:Name="category" Text="Категория: [Категория]" />
+        <Label x:Name="ed" Text="Единица измерения: [Единица измерения]" />
+        <Label x:Name="fats" Text="Жиры: [Жиры]" />
+        <Label x:Name="protein" Text="Белки: [Белки]" />
+        <Label x:Name="carbohydrates" Text="Углеводы: [Углеводы]" />
+        <Label x:Name="vitamins" Text="Витамины: [Витамины]" />
+        <Label x:Name="price" Text="Цена: [Цена]" />
+        <Label x:Name="postav" Text="Поставщик: [Поставщик]" />
+        <Label x:Name="quantity" Text="Количество: [Количество]" />
+        <Label x:Name="recept" Text="Рецепт: [Рецепт]" />
+        <Entry Placeholder="Введите количество (0.5 - 10 кг)"
+               Keyboard="Numeric"
+               x:Name="QuantityInfoEntry" ClassId="entry"/>
+        <Button Text="Расчет стоимости торта"
+                Clicked="OnCalculateCostClicked" ClassId="button"/>
+        <Button Text="Возврат на главную страницу"
+                Clicked="OnReturnToMainPageClicked" ClassId="button"/>
+    </StackLayout>
+
+</ContentPage>
